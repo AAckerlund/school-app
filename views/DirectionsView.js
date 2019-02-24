@@ -1,19 +1,31 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {Components} from 'exponent';
+import {MapView,
+		satellite,
+		hybrid} from 'react-native';
 
-export default class DirectionsView extends React.Component {
+export default class DirectionsView extends Component {
+	
+	constructor(props){
+		super(props);
+		this.props = {
+			lat: lat,
+			lon: lon
+		}
+	}
+	
   render(){
     return(
      <Components.MapView
         style={{flex: 1}}
-        initialRegion={{
-          latitude: 46.6055,
-          longitude: -112.0245,
-          latitudeDelta: 0.0722,
-          longitudeDelta: 0.0221,
+		mapType="hybrid"
+        region={{
+          latitude: lat,
+          longitude: lon,
+          latitudeDelta: 0.0022,
+          longitudeDelta: 0.0021,
         }}
-      /> 
+      />
     );
   }
-}
-
+}                           

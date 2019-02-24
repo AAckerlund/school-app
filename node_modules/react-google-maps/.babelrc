@@ -1,0 +1,19 @@
+{
+  "env": {
+    "test": {
+      "plugins": [
+        "typecheck"
+      ]
+    }
+  },
+  "plugins": [
+    "lodash",
+    "transform-flow-comments",
+    "transform-runtime"
+  ],
+  "presets": [
+    "es2015",
+    "stage-0",
+    "react"
+  ]
+}

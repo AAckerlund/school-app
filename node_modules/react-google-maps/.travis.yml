@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+- '4'
+- '6'
+before_script:
+- rm -rf lib src/app # Temp
+script:
+- npm test -- --coverage
+after_script:
+- if [[ `node --version` == *v6* ]]; then cat ./coverage/lcov.info | ./node_modules/.bin/codeclimate-test-reporter;
+  fi
+env:
+  global:
+    secure: gYr2P0NQiF4sdolyrwfAURyM/SWPeYvYjhZdVQrGC1RszfpKFJuXvUAZsxA8zdco+oPTn1YeVbbqvOL+ZwAAZr58N9Ou0v/wwDc7XPRpn1odAHTFi5o5yAmX12SIKmt7O9UeT/hIu0ejyd85d2XHsQiGdVWDno4nrNZUnar/PgE=

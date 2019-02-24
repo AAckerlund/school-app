@@ -1,5 +1,5 @@
 {
-  "exponentServerPort": 19000,
+  "exponentServerPort": null,
   "packagerPort": null,
   "packagerPid": null,
   "exponentServerNgrokUrl": null,
